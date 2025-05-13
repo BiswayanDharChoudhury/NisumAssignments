@@ -31,7 +31,6 @@ class Student {
         System.out.println("Class: " + className);
         System.out.println("Roll No: " + rollNo);
         System.out.println("College: " + college);
-        System.out.println("--------------------------------");
     }
 }
 
