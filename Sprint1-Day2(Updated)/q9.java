@@ -17,7 +17,7 @@ class Event {
     }
 }
 
-public class EventCalendar {
+public class q9 {
     private static final TreeMap<String, List<Event>> calendar = new TreeMap<>();
 
     public static void addEvent(String date, String title, String time, String description) {
