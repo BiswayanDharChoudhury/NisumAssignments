@@ -25,7 +25,7 @@ class Employee implements Comparable<Employee> {
     }
 }
 
-public class EmployeeRecords {
+public class q6 {
     private static final TreeSet<Employee> employeeSet = new TreeSet<>();
 
     // Add new employee
