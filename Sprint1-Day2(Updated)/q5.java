@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Stack;
 
-public class BrowserHistory {
+public class q5 {
 
     private static final Stack<String> history = new Stack<>();
     private static String currentPage = "Home";
