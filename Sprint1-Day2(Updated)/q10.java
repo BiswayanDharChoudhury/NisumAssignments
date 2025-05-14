@@ -21,7 +21,7 @@ class Movie {
     }
 }
 
-public class MovieCollectionManager {
+public class q10 {
     private static final ArrayList<Movie> movieCollection = new ArrayList<>();
 
     // Add a new movie to the collection
