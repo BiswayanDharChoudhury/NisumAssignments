@@ -17,7 +17,7 @@ class Student {
     }
 }
 
-public class StudentManager {
+public class q2 {
     private static ArrayList<Student> studentList = new ArrayList<>();
 
     public static void addStudent(int id, String name, double grade) {
