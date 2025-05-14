@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class WordFrequencyCounter {
+public class q7 {
 
     // Method to process and clean the text
     private static String cleanText(String text) {
