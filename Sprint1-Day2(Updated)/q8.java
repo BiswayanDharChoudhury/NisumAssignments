@@ -18,7 +18,7 @@ class MenuItem {
     }
 }
 
-public class RestaurantMenu {
+public class q8 {
 
     // LinkedHashMap to maintain category insertion order
     private static final LinkedHashMap<String, HashMap<String, MenuItem>> menuCatalog = new LinkedHashMap<>();
