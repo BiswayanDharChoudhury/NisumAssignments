@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class EmailManager {
+public class q3 {
 
     private static final HashSet<String> emailSet = new HashSet<>();
 
