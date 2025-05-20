@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple SPA</title>
+    <link rel = "stylesheet" href = "style.css" />
+</head>
+<body>
+    <header>
+        <h1>Simple SPA</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="navigate('home')"></a>Home</li>
+                <li><a href="#about" onclick="navigate('about')"></a>About</li>
+                <li><a href="#contact" onclick="navigate('contact')"></a>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id = "home" class = "page active">
+            <h2>Welcome to home</h2>
+            <p>This is home page our Single Page Application.</p>
+        </section>
+
+        <section id = "about" class = "page">
+            <h2>Contact Us</h2>
+            <p>This is the contact section . Feel free to reach out!</p>
+        </section>
+    </main>
+
+    <script src = "sricpt.js"></script>
+</body>
+</html>
