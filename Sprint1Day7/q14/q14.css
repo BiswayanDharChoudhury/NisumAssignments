@@ -1,0 +1,10 @@
+.transform-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.transform-btn:hover {
+  transform: rotate(15deg) scale(1.2) translateX(10px);
+}
