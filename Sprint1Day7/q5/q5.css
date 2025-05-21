@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f2f7fb;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #2196f3;
+    color: white;
+  }
+  
+  header input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .weather-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .weather-icon {
+    width: 60px;
+    margin-right: 10px;
+  }
+  
+  .temp-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .forecast {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .day {
+    text-align: center;
+    background: #e3f2fd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .day img {
+    width: 40px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #1976d2;
+    color: white;
+    margin-top: 20px;
+  }
+  
