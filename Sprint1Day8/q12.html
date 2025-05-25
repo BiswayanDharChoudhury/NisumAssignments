@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loop Through an Object</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    .output {
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 8px;
+      max-width: 400px;
+    }
+
+    .output p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>User Details</h2>
+  <div class="output" id="output"></div>
+
+  <script>
+    const user = {
+      name: "Alice",
+      age: 25,
+      email: "alice@example.com"
+    };
+
+    const outputDiv = document.getElementById("output");
+
+    for (const key in user) {
+      if (user.hasOwnProperty(key)) {
+        const value = user[key];
+        const line = `${key}: ${value}`;
+        console.log(line); 
+        const p = document.createElement("p");
+        p.textContent = line;
+        outputDiv.appendChild(p); 
+      }
+    }
+  </script>
+
+</body>
+</html>
