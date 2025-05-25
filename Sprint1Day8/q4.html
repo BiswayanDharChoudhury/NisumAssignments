@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car OOP Example</title>
+</head>
+<body>
+
+  <h1>Open the console to see Car in action!</h1>
+
+  <script>
+    
+    class Car {
+      constructor(brand, speed) {
+        this.brand = brand;
+        this.speed = speed;
+      }
+      
+      accelerate() {
+        this.speed += 10;
+        console.log(`${this.brand} accelerated to ${this.speed} km/h`);
+      }
+    }
+    const myCar = new Car("Toyota", 50);
+
+    myCar.accelerate(); 
+    myCar.accelerate(); 
+  </script>
+
+</body>
+</html>
