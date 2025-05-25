@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic List Creator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    input[type="text"] {
+      width: 70%;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      margin-left: 10px;
+      background: #2196f3;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    ul {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Dynamic List</h2>
+
+  <input type="text" id="itemInput" placeholder="Enter item..." />
+  <button onclick="addItem()">Add</button>
+
+  <ul id="itemList"></ul>
+
+  <script>
+    function addItem() {
+      const input = document.getElementById("itemInput");
+      const value = input.value.trim();
+
+      if (value !== "") {
+        const li = document.createElement("li");
+        li.textContent = value;
+        document.getElementById("itemList").appendChild(li);
+        input.value = ""; 
+      } else {
+        alert("Please enter a value.");
+      }
+    }
+  </script>
+
+</body>
+</html>
