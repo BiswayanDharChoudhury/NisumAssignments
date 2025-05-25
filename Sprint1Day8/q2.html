@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Handling Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+
+    #submitBtn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #submitBtn:hover {
+      background-color: #1976d2;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Click the Button</h1>
+  <button id="submitBtn">Submit</button>
+
+  <script>
+    const button = document.getElementById("submitBtn");
+    button.addEventListener("click", function() {
+      alert("Submitted!");
+    });
+  </script>
+
+</body>
+</html>
