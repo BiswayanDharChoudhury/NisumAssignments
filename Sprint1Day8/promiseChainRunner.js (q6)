@@ -1,0 +1,27 @@
+
+
+function runTasksSequentially(tasks) {
+  const results = [];
+  let promise = Promise.resolve(); 
+
+  tasks.forEach((task) => {
+    promise = promise
+      .then(() => task())
+      .then((result) => {
+        results.push(result); 
+      })
+      .catch((error) => {
+        console.log(error); 
+      });
+  });
+
+  return promise.then(() => results); 
+}
+
+const tasks = [
+  () => Promise.resolve('Task 1 done'),
+  () => Promise.reject('Task 2 failed'),
+  () => Promise.resolve('Task 3 done'),
+];
+
+runTasksSequentially(tasks).then(console.log);
