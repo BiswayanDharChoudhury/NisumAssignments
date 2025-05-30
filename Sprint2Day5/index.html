@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>To-Do List App</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    input[type=text] { padding: 10px; width: 300px; }
+    button { padding: 10px 15px; margin-left: 10px; }
+    ul { margin-top: 20px; }
+    li { margin: 8px 0; }
+    .done { text-decoration: line-through; color: gray; }
+  </style>
+</head>
+<body>
+
+  <h2>Simple To-Do List App</h2>
+  
+  <input type="text" id="taskInput" placeholder="Enter a new task" />
+  <button onclick="addTask()">Add Task</button>
+  
+  <ul id="taskList"></ul>
+
+<script>
+  // I define the function to add a new task when the button is clicked
+  function addTask() {
+    // I get the input element where the user types the task
+    var taskInput = document.getElementById('taskInput');
+    // I read and trim the text entered by the user
+    var taskText = taskInput.value.trim();
+
+    // I check if the input is empty and alert the user if so
+    if (taskText === '') {
+      alert('Please enter a task!');
+      return;
+    }
+
+    // I create a task object with id, text, and done status
+    var task = {
+      id: Date.now(), // I assign a unique timestamp as id
+      text: taskText,
+      done: false // task is initially not done
+    };
+
+    // I add the new task to my global tasks array
+    tasks.push(task);
+    // I clear the input box for the next task
+    taskInput.value = '';
+    
+    // I call the function to refresh the task list display
+    renderTasks();
+  }
+
+  // I declare an array to store all my tasks
+  var tasks = [];
+
+  // I define a function to render all tasks on the page
+  function renderTasks() {
+    // I get the task list container element
+    var taskList = document.getElementById('taskList');
+    // I clear out the current displayed list
+    taskList.innerHTML = '';
+
+    // I loop over all tasks in the array
+    for (var i = 0; i < tasks.length; i++) {
+      var task = tasks[i];
+
+      // I create a new list item for each task
+      var li = document.createElement('li');
+      // I set the task text inside the list item
+      li.textContent = task.text;
+      // I store the task id in a data attribute for reference
+      li.setAttribute('data-id', task.id);
+
+      // If the task is done, I style it accordingly
+      if (task.done) {
+        li.classList.add('done');
+      }
+
+      // I add a click event to toggle the done status of the task
+      li.onclick = function() {
+        var id = parseInt(this.getAttribute('data-id'));
+        toggleDone(id);
+      };
+
+      // I create a delete button for each task item
+      var delBtn = document.createElement('button');
+      delBtn.textContent = 'Delete';
+      delBtn.style.marginLeft = '10px';
+
+      // I create a closure to preserve the current task id for the delete button
+      (function(id) {
+        // I assign the delete function to the button's click event
+        delBtn.onclick = function(event) {
+          event.stopPropagation(); // I stop the li click event from firing
+          deleteTask(id);
+        };
+      })(task.id);
+
+      // I add the delete button to the task item
+      li.appendChild(delBtn);
+      // I add the task item to the task list container
+      taskList.appendChild(li);
+    }
+  }
+
+  // I define a function to toggle the done status of a task by id
+  function toggleDone(id) {
+    // I find the task with the matching id in the array
+    for (var i = 0; i < tasks.length; i++) {
+      if (tasks[i].id === id) {
+        // I flip the done boolean value
+        tasks[i].done = !tasks[i].done;
+        break;
+      }
+    }
+    // I refresh the task list display to reflect the change
+    renderTasks();
+  }
+
+  // I define a function to delete a task by id
+  function deleteTask(id) {
+    // I remove the task from the array by filtering it out
+    tasks = tasks.filter(function(task) {
+      return task.id !== id;
+    });
+    // I update the task list UI after deletion
+    renderTasks();
+  }
+
+  // I call renderTasks initially to show an empty task list on page load
+  renderTasks();
+
+</script>
+
+</body>
+</html>
