@@ -1,0 +1,4 @@
+Unhandled Exception in thread "main":
+Exception: java.lang.NullPointerException
+	at q7.main(q7.java:22)
+
