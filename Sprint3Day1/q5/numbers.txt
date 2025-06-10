@@ -1,0 +1,8 @@
+42
+100
+-5
+abc      // Invalid: triggers NumberFormatException
+999
+3.14     // Invalid: decimal is not an integer
+0
+hello    // Invalid: string
