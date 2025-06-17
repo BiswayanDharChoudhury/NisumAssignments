@@ -1,0 +1,21 @@
+.notifications {
+  width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notification {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.read {
+  background-color: #e0ffe0;
+}
+
+.unread {
+  background-color: #ffe0e0;
+}
