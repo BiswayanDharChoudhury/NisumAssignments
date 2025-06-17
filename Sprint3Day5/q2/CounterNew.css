@@ -1,0 +1,31 @@
+.counter-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.btn {
+  padding: 10px 15px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.increment {
+  background-color: green;
+}
+
+.decrement {
+  background-color: red;
+}
+
+.reset {
+  background-color: gray;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
