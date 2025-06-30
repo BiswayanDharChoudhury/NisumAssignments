@@ -1,5 +1,0 @@
-{
-  "name": "AB",  // Too short
-  "price": -10.0, // Negative
-  "sku": "INVALID" // Wrong format
-}
