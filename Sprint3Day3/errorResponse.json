@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-06-30T12:34:56.789",
+  "status": 400,
+  "error": "Validation failed",
+  "fieldErrors": [
+    {
+      "field": "name",
+      "message": "Name must be between 3-50 characters"
+    },
+    {
+      "field": "price",
+      "message": "Price must be greater than 0"
+    },
+    {
+      "field": "sku",
+      "message": "SKU must be in AAA-1234 format"
+    }
+  ]
+}
