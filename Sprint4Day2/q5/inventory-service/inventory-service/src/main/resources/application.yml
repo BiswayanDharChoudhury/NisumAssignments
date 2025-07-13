@@ -1,0 +1,8 @@
+server:
+  port: 8081   # or any port you want this service to run on
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info

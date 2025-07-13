@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: inventory-service   # or order-service, depending on the service
+  cloud:
+    config:
+      uri: http://localhost:8888
